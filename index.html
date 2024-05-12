@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ['Montserrat', 'sans-serif']
+                },
+                extend: {
+                    colors: {
+                        lila: '#EDF2FF',
+                        lilaClair: '#F8F7FF',
+                        roseClair: '#FCF4FF',
+                        rose: '#FCEAFF',
+                        violet: '#646FFA',
+                    },
+                    boxShadow: {
+                        '3xl': '0px 0px 9px 1px rgba(189,189,189,0.84)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-r from-lila from-lilaClair from-roseClair to-rose">
+<div class="flex flex-col items-center w-full mb-16">
+    <h1 class="text-5xl font-bold text-violet mt-10">
+        Bloc note
+    </h1>
+    <p class="text-lg font-bold  ">Double clique sur une note pour la supprimer</p>
+</div>
+<div id="container" class="w-full grid grid-cols-4 gap-4 justify-items-center">
+
+    <div id="add"
+         class="w-64 h-52 border-2 border-white bg-white bg-opacity-60 backdrop-blur-md rounded-lg drop-shadow-2xl flex justify-center items-center hover:bg-opacity-100 ">
+        <img src="image/icons8-plus-emoji-48.png" alt="plus" class="size-24 opacity-50 hover:opacity-100">
+    </div>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
